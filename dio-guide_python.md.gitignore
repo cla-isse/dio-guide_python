@@ -1,0 +1,2069 @@
+# ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+Olá, pessoa bonita! Tudo bem com você? 
+
+Este é um resumo construído com base no curso "Introdução à Ciência de Dados e Python", na plataforma [DIO](https://web.dio.me/home).
+
+Mentor: [@guicarvalho](https://github.com/guicarvalho)
+
+## Sumário
+
+[1. Ambiente de desenvolvimeto e Primeiros Passos com Python](#1-ambiente-de-desenvolvimeto-e-primeiros-passos-com-python)
+* [1.1 Introdução ao Python](#11-introdução-ao-python)
+* [1.2 Configuaração do Ambiente de Desenvolvimento](#12-configuração-do-ambiente-de-desenvolvimento)
+* [1.3 Primeiro Programa](#13-primeiro-programa)
+
+[2. Conhecendo a Linguagem de Programação Python](#2-conhecendo-a-linguagem-de-programação-python)
+* [2.1 Tipos de Dados](#21-tipos-de-dados)
+* [2.2 Modo Interativo](#22-modo-interativo)
+* [2.3 Variáveis e Constantes](#23-variáveis-e-constantes)
+* [2.4 Conversão de Tipos](#24-conversão-de-tipos)
+* [2.5 Funções de Entrada e Saída](#25-funções-de-entrada-e-saída)
+
+[3. Tipos de Operadores](#3-tipos-de-operadores)
+* [3.1 Operadores Aritméticos](#31-operadores-aritméticos)
+* [3.2 Operadores de Comparação](#32-operadores-de-comparação)
+* [3.3 Operadores de Atribuição](#33-operadores-de-atribuição)
+* [3.4 Operadores Lógicos](#34-operadores-lógicos)
+* [3.5 Operadores de Identidade](#35-operadores-de-identidade)
+* [3.6 Operadores de Associação](#36-operadores-de-associação)
+
+[4. Estruturas Condicionais e de Repetição](#4-estruturas-condicionais-e-de-repetição)
+* [4.1 Indentação e Blocos](#41-indentação-e-blocos)
+* [4.2 Estruturas Condicionais](#42-estruturas-condicionais)
+* [4.3 Estruturas de Repetição](#43-estruturas-de-repetição)
+
+[5. Strings](#5-manipulando-strings)
+* [5.1 Conhecendo Métodos Úteis da Classe String](#51-conhecendo-métodos-úteis-da-classe-string)
+* [5.2 Interpolação de Variáveis](#52-interpolação-de-variáveis)
+* [5.3 Fatiamento de String](#53-fatiamento-de-strings)
+* [5.4 String de múltiplas linhas](#54-string-de-múltiplas-linhas)
+
+[6. Listas e Tuplas](#6-listas)
+* [6.1 Criação de Listas e Acesso aos Dados](#61-criação-e-acesso-aos-dados)
+* [6.2 Métodos da Classe list](#62-métodos-da-classe-list)
+
+[7. Conjuntos](#7-conjuntos)
+* [7.1 Criação de Conjuntos e Acesso aos Dados](#71-criação-e-acesso-aos-dados)
+* [7.2 Métodos da Classe set](#72-métodos-da-classe-set)
+
+[8. Dicionários](#8-dicionários)
+* [8.1 Criação de Dicionários e Acesso aos Dados](#81-criação-de-dicionários-e-acesso-aos-dados)
+* [8.2 Métodos da Classe dict](#82-métodos-da-classe-dict)
+
+[9. Funções](#9-funções)
+
+---
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 1. Ambiente de desenvolvimeto e Primeiros Passos com Python
+
+#### 1.1 Introdução ao Python
+
+Python foi Criado, em 1989, por Guido Van Rossum. A ideia original era dar continuidade a linguagem ABC. Logo, foi muito influenciado pela linguagem ABC, pensada para iniciantes.
+
+* Linguagem fácil e intuitiva;
+* Código aberto;
+* Código tão inteligível quanto o inglês (síntaxe bonita);
+* Adequada para tarefas diárias e produtiva.
+
+```mermaid
+  flowchart TD;
+      A[1991]-- Lançada a primeira versão pública do Python, 0.9.0 -->B[1994]
+      B-- Lançada a versão 1.0 -->C[1995]
+      C-- Lançada a versão 1.2. <br> Guido e a equipe principal de desenvolvedroes Python <br> mudam-se para BeOpen. Nasce BeOpen Python Labs -->D[2000]
+      D-- Nasce a segunda versão do Python. -->E[2001]
+      E-- Python Software Foundation -PSF- é fundada -->F[2008]
+      F-- Lançada a vesão 3.0 do Python. <br> Não é retrocompatível. -->G[...]
+```
+Atualmente o estamos na versão 3.10.2 do Python.
+
+##### Onde utilizar o Python?
+
+É um linguagem versátil. 
+* Tipagem dinâmica e forte;
+* Multiplataforma e multiparadigma;
+* Comunidade grande e ativa;
+* Curva de aprendizado baixa.
+
+Só não é uma boa para apps mobile.
+
+#### 1.2 Configuração do ambiente de desenvolvimento
+
+Nos sistemas operacionais Linux e MacOS, é provável que o Python já esteja instalado.
+
+> Para verificar a versão instalada do Python, basta abrir o cmd e inserir o comando:
+
+```cmd
+python -V
+```
+
+No Windows, o Python pode ser baixado por este link: http://www.python.org
+
+Para a instalação, é só seguir os passos neste [tutorial](https://python.org.br/instalacao-windows/.).
+
+#### 1.3 Primeiro Programa
+
+Exibe, na tela, uma mensagem de boas-vindas.
+
+```python
+print("Olá Mundo!")
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 2. Conhecendo a Linguagem de Programação Python
+
+#### 2.1 Tipos de Dados
+
+Tipos servem para denifir as caracerísticas e comportamentos de um objeto para o interpretador.
+
+Os tipos built-in mais comuns são:
+
+|Tipo|Classe|
+|---|---|
+|Texto|str|
+|Numérico|int, float, complex|
+|Sequência|list, tuple, range|
+|Mapa|dict|
+|Coleção|set, frozenset|
+|Booleano|bool|
+|Binário|bytes, bytearray, memoryview|
+
+> Mapa = chave:valor ->  nome:guilherme
+
+#### Tipos Numéricos
+
+##### Números Inteiros
+
+São representados pela classe **int** e possuem precisão ilimitada.
+>Ex. 1, 10, 100
+
+##### Números de ponto flutuante
+
+São usados para representar os números racionais e sua implementação é feita pela classe **float**.
+> Ex. 1.5, -10.435, 0.75
+
+#### Tipo Booleano
+
+É usado para representar valores de verdadeiro ou falso, e é impementado pela classe **bool**. 
+* Em Python, é uma subclasse de **int**, uma vez que qualquer número diferente de 0 representa **verdadeiro** e 0 representa **falso**.
+
+> Ex. True e False
+
+#### Tipo Texto
+
+Strings, ou cadeia de caracteres, são usadas para representar valores alfanuméricos. Em Python, são definidas pela classe **str**.
+
+> Ex. "Python", 'Python', """Python""", 'p'
+
+#### 2.2 Modo Interativo
+
+No VSCode Studio, é possível ativar o modo interativo do interpretador Python no terminal.
+
+Basta escrever:
+```python
+python
+```
+
+ou executando o script com a flag -i:
+```python
+python -i nome-do-arquivo.py
+```
+Para sair do modo interatitvo:
+```python
+exit()
+```
+
+Dessa forma, é possível executar comandos (como operaões numéricas, por exemplo) sem a necessidade de escrever e executar um script.
+
+##### dir()
+
+A função **dir**, sem argumentos, retorna a lista de nomes no escopo local atual. Com um argumento, retorna uma lista de atributos válido para o objeto.
+
+```python
+dir()
+```
+
+##### help()
+
+A função **help** invoca o sistema de ajuda integrado. É possível fazer buscas em modo interativo ou informar por parâmetro qual o nome do módulo, função, classe, método ou variável.
+
+```python
+help()
+```
+#### 2.3 Variáveis e Constantes
+
+##### Variáveis
+
+**Varáveis** são valores (objetos) que podem sofrer variações ao longo da execução de um programa.
+
+Não é preciso declarar o tipo de dados da variável, o Python reconhece automaticamente.
+
+Dessa forma, nãoé possível declarar uma variável sem um valor atribuído.
+
+* Para alterar o valor de uma variável, basta fazer a tribuição de um novo valor.
+
+```python
+name = 'Gui'
+age = 23
+# ou name, age = ('Gui', 23)
+
+print(f'Meu nome é {name} e eu tenho {age} anos de idade.')
+>>> Meu nome é Gui e eu tenho 23 anos de idade
+```
+
+##### Constantes
+
+**Constantes** são valores (objetos) que **NÃO** podem sofrer variações ao longo da execução de um programa. O valor é imutável.
+
+Contudo, não existe uma palavra reservada, em Python, para informar ao interpretador que o valor é constante.
+
+Em Python, usamos a **convenção** que diz ao **programador** que determinado valor é uma constante. Para fazer isso, o valor deve ser declarado com todas as letras maíusculas.
+
+```python
+ABS_PATH = '/home/gui/Documents/python_course/'
+
+STATES = [
+  'SP',
+  'RJ',
+  'MG',
+]
+
+AMOUNT = 30.2
+```
+
+##### Boas Práticas
+
+* O padrão de nomes deve ser **snake_case**;
+* Nomes devem ser intuitivos e sugestivos;
+* Nome de constantes todo em maíusculo.
+
+#### 2.4 Conversão de Tipos
+
+Pode ser necessário converter o tipo de uma variável para que seja manipulada de forma diferente. 
+
+>Ex. Uma variável string que armazena um número que passará por alguma operação matemática.
+
+##### int para float
+```python
+preco = 10
+print(preco)
+>>> 10
+
+preco = float(preco)
+print(preco)
+>>> 10.0
+
+# Para voltar de float para int:
+preco = int(preco)
+print(preco)
+>>> 10
+```
+
+##### numérico para string
+```python
+preco = 10.50
+idade = 23
+
+print(str(preco))
+>>> 10.5
+
+# ou
+
+texto = f"idade {idade} preco {preco}"
+print(texto)
+>>> idade 28 preco 10.5
+```
+
+##### string para numérico
+
+```python
+preco = "10.50"
+idade = "28"
+
+print(float(preco))
+>>> 10.50
+
+print(int(idade))
+>>> 28
+```
+#### 2.5 Funções de entrada e saída
+
+input -> output
+
+##### Função input()
+
+A função built-in **input()** é utilizada quando queremos ler dados de entrada padrão (teclado). Ela recebe um argumento do tipo string, que é exibido para o usuário na saída padrão (tela). 
+
+A função lê a entrada, converte para string e retorna o valor.
+
+```python
+nome = input("Informe seu nome: ")
+>>> Informe o seu nome: |
+```
+
+##### Função print()
+
+A função built-in **print()** é utilizada quando queremos exibir dados na saída padrão (tela). 
+
+Ela recebe um argumento onrigatório, do tipo varargs de objetos e 4 argumentos opcionais (sep, end, file e flush). 
+
+Todos os objetos são convertidos para string, separados por *sep* e terminados por *end*. A string final é exibida para o usuário.
+
+```python
+nome = "Janaina"
+sobrenome = "Souza"
+
+print(nome, sobrenome)
+>>> Jananina Souza
+
+pritn(nome, sobrenome, sep="-" end="...\n")
+>>> Janaina-Souza...
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 3. Tipos de Operadores
+
+#### 3.1 Operadores aritméticos
+
+Os operadores aritméticos executam operações matemáticas.
+
+|Operação|Operador|
+|---|---|
+|Soma|+|
+|Subtração|-|
+|Multiplicação|*|
+|Divisão Real|/|
+|Divisão Inteira|//|
+|Módulo|%|
+|Exponenciação|**|
+
+
+> A **divisão inteira** não retorna a parte decimal da divisão.
+> 
+> O **módulo** retorna apenas o resto da divisão.
+
+##### Precedência dos operadores
+
+A execução das operações matemáicas segue a seguinte ordem:
+
+```mermaid
+flowchart LR;
+      A[parêntesis]-->B[expoente]-->C[multiplicação e divisão <br> da esquerda para a direita]-->D[soma e subtração <br> da esquerda para a direita]
+```
+
+#### 3.2 Operadores de Comparação
+
+Os operadores de comparação servem para comparar dois valores.
+
+|Operação|Operador|
+|---|---|
+|Igual|==|
+|Diferente|!=|
+|Maior|>|
+|Maior ou Igual|>=|
+|Menor|<|
+|Menor ou Igual|<=|
+
+> OBS: O operador **=** já está reservado para atribuição, por isso a comparação "igual" é feita com **==**.
+
+#### 3.3 Operadores de Atribuição
+
+Os operadores de atribuição servem para definir o valor inicial ou sobrescrever o valor de uma variável.
+
+##### Atribuição simples
+
+```python
+saldo = 500
+print(saldo)
+>>> 500
+```
+##### Atribuição com adição ou subtração
+
+```python
+saldo = 500
+saldo +=200
+print(saldo)
+>>> 700
+```
+
+##### Atribuição com multiplicação
+
+```python
+saldo = 500
+saldo *= 2
+print(saldo)
+>>> 1000
+```
+
+##### Atribuição com divisão
+
+```python
+saldo = 500
+saldo /= 5
+print(saldo)
+>>> 100.0
+
+saldo = 500
+saldo //= 5
+>>> 100
+```
+
+##### Atribuição com muódulo
+
+```python
+saldo = 500
+saldo %= 4
+print(saldo)
+>>> 20
+```
+
+##### Atribuição com exponenciação
+
+```python
+saldo = 8
+saldo **= 2
+print(saldo)
+>>> 64
+```
+
+#### 3.4 Operadores Lógicos
+
+Operadores lógicos são utilizados em conjunto com os operadores de comparação, para montar uma expressão lógica. 
+
+Quando um operador de comparação é utilizado, o resultado retornado é um booleano, dessa forma podemos combinar operadores de comparação com os operadores lógicos.
+
+```python
+saldo = 1000
+saque = 200
+limite = 100
+
+saldo >= saque
+>>> True
+
+saque <= limite
+>>> False
+```
+
+##### Operador E
+
+```python
+saldo >= saque and saque <=limite
+>>> False
+```
+
+A expressão é verdadeira apenas se todas as afirmações forem verdadeiras.
+
+##### Operador OR
+
+```python
+saldo >= saque or saque <=limite
+>>> False
+```
+A expressão é verdadeira apenas se pelo menos uma afirmação for verdadeiras.
+
+##### Operador NOT
+
+```python
+contatos_emergencia = []
+
+not 1000 > 1500
+>>> True
+# 1000 não é maior que 1500?
+
+not contatos_emergencia
+>>> True
+# O valor booleano de uma lista vazia é falso. 
+# not false = True
+
+not ""
+>>> True
+# O valor booleano de uma string vazia é falso.
+# not false = True
+
+not "saque 1500;"
+>>> False
+# O valor booleano de uma string é verdadeiro.
+# not verdadeiro = False
+```
+
+> Sequências vazias, em Python, tem o valor booleano **False**.
+
+##### Parênteses
+
+Por convenção, assim como nas operações matemáticas, nas operações lógicas os parêntes servem para determinar a precedência, ou seja, a sequência em que a expressão é analisada no código.
+
+O exemplo abaixo representa um sistema bancário de saque que segue as regras: 
+* Não se pode sacar um valor maior que o disponível na conta.
+* Não se pode sacar um valor maior que o limite diário de saque.
+* Se a conta for especial, não há limite diário de saque.
+
+```python
+saldo = 1000
+saque = 250
+limite = 200
+conta_especial = True
+
+print((saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque))
+>>> True
+
+# ou
+
+saque_conta_normal = saldo >= saque and saque <= limite
+saque_conta_especial = conta_especial and saldo >= saque
+
+print(saque_conta_normal or saque_conta_especial)
+```
+
+#### 3.5 Operadores de Identidade
+
+Operadores de identidade ão utilizados para comparar se os dois objetos testados ocupam a mesma posição na memória.
+
+```python
+curso = "Curso de Python"
+nome_curso = curso
+saldo, limite = 200, 200
+
+curso is nome_curso
+>>> True
+
+curso is not nome_curso
+>>> False
+
+saldo is limite
+>>> True
+```
+
+#### 3.6 Operadores de Associação
+
+Operadores de associação utilizados para verificar se um objeto está presente em uma sequência.
+
+> São case sensitive.
+
+
+```python
+curso = "Curso de Python"
+frutas = ["laranja","uva","limão"]
+saques = [1500,100]
+
+"Python" in curso
+>>> True
+
+"maçã" not in frutas
+>>> True
+
+200 in saques
+>>> False
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 4. Estruturas Condicionais e de Repetição
+
+#### 4.1 Indentação e Blocos
+
+Indentar código é uma forma de manter o código fonte mais legível e manutenível. Mas em Python ela exerce um segundo papel, através da indentação o interpretador consegue determinar onde um bloco de comando inicia e onde ele termina.
+
+As linguagens de programação costumam utilizar caracteres ou palavras reservadas para terminar o início e fim do bloco. Em Java e C por exemplo, utilizamos chaves:
+
+```java
+void sacar(double valor) { // início do bloco do método
+  if(this.saldo >= valor) { // início do bloco do if
+    this.saldo -= valor;
+  } // fim do bloco do if
+} // fim do bloco do método
+```
+
+Porém, o código ainda funciona sem indentação:
+
+```java
+void sacar(double valor) {
+if(this.saldo >= valor) {
+this.saldo -= valor;
+}
+}
+```
+
+O mesmo não acontece em Python.
+
+```python
+def sacar(self, valor:float) -> Nome # Início do bloco do método
+    if self.saldo >= valor # início do bloco if
+        self.saldo -= valor
+    # fim do bloco if
+# fim do bloco do método
+```
+
+#### 4.2 Estruturas Condicionais
+
+Uma estrutura condicional permite o desvio de fluxo de controle, quando determinadas expressões lógicas são atendidas.
+
+##### If
+
+Para criar uma estrutura condicional simples, composta por um único desvio, podemos utilizar a palavra reservada **if**. 
+
+O comando irá testar a expressão lógica, e em caso de retorno verdadeiro as ações presentes no bloco de código do if serão executadas.
+
+```python
+saldo = 2000.0
+saque = float(input(f"Você possui um saldo de R${saldo}. Informe o valor do saque: "))
+
+if saldo >= saque:
+  print("Saque Realizado!")
+
+if saldo < saque:
+  print("Saldo Insuficiente!")
+```
+
+##### If/Else
+
+Para criar uma estrutura condicional com dois desvios, podemos utilizar as palavras reservadas **if** e **else**. 
+
+Se a expressão lógica testada no if for verdadeira, então o bloco de código do if será executado. Caso contrário, o bloco de código do else será executado.
+
+```python
+saldo = 2000.0
+saque = float(input(f"Você possui um saldo de R${saldo}. Informe o valor do saque: "))
+
+if saldo >= saque:
+  print("Saque Realizado!")
+else:
+  print("Saldo Insuficiente!")
+```
+
+##### If/Elif/Else
+
+Em alguns cenários queremos mais de dois desvios, para isso podemos utilizar a palavra reservada **elif**. 
+
+O elif é composto por uma nova expressão lógica, que será testada e caso retorne verdadeiro o bloco de código do elif será executado. 
+
+* Não existe um número máximo de elifs que podemos utilizar, porém evite criar grandes estruturas condicionais, pois elas **aumentam a complexidade do código**.
+
+```python
+opcao = int(input("Informe uma opção: [1] Sacar \n [2] Extrato"))
+
+if opcao == 1:
+  valor = float(input("Informe o valor do saque: "))
+  print(f"Você sacou R${valor}")
+
+elif opcao == 2:
+  print("Exibindo o Extrato")
+
+else:
+  exit("Opção Inválida")
+```
+
+##### If aninhado
+
+Podemos criar estruturas condicionais aninhadas, para isso basta adicionar estruturas if/elif/else dentro do bloco de código de estruturas if/elif/else.
+
+```python
+if conta_normal:
+  if saque <= saldo:
+    print("Saque realizado com sucesso!")
+    elif saque >= (saldo + cheque_especial):
+      print("Saque realizado com uso do cheque especial")
+elif conta_universítária:
+  if saque <= saldo:
+    print("Saque realizado com sucesso!")
+  else:
+    print("Saldo insuficiente")
+```
+
+##### If ternário
+
+O if ternário permite escrever uma condição em uma única linha. Ele é composto por três partes:
+1. O retorno caso a expressão retorne verdadeiro.
+2. A expressão lógica. 
+3. retorno caso a expressão não seja atendida.
+
+```python
+status = "Sucesso" if saldo >= saque else "Falha"
+
+print(f"{status} ao realizar o saque!")
+```
+
+#### 4.3 Estruturas de Repetição
+
+Estruturas de repetição são utilizadas para repetir um trecho de código um determinado número de vezes. 
+* Esse número pode ser conhecido previamente ou determinado através de uma expressão lógica.
+
+Receba um número do teclado e exiba os 2 números seguintes:
+
+```python
+# Sem repetição 
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+a += 1
+print(a)
+
+a += 1
+print(a)
+```
+
+```python
+# Com repetição 
+
+a = int(input("Informe um número inteiro: "))
+print(a)
+
+"repita 2 vezes":
+  a += 1
+  print(a)
+```
+
+##### For
+
+O comando for é usado para percorrer um objeto iterável. Faz sentido usar for quando sabemos o número exato de vezes que nosso bloco de código deve ser executado, ou quando queremos percorrer um objeto iterável.
+
+```python
+texto = input("Informe um texto: ")
+VOGAIS = "AEIOU"
+
+for letra in texto:
+  if letra.upper() in VOGAIS
+    print(letra, end="")
+
+else:
+  print() #adiciona um quebra de linha
+```
+
+##### Range
+
+Range é uma função built-in do Python usada para produzir uma sequência de números inteiros a partir de um ínicio (inclusivo) para um fim (exclusivo). 
+
+Se usarmos range(i, j) será produzido: 
+
+> i, i+1, i+2, i+3, ..., j-1.
+
+Ela recebe 3 argumentos:
+* stop (obrigatório);
+* start (opcional);
+* step (opcional).
+
+```python
+range(start, stop, step) -> range object
+```
+
+```python
+list(range(4))
+>>> [0, 1, 2, 3]
+```
+
+##### Range + For
+
+```python
+for numero in range(0, 11):
+  print(numero, end=" ")
+>>> 0 1 2 3 4 5 6 7 8 9 10
+
+# Exibindo a tabuada do 5
+for numero in range(0, 51, 5):
+  print(numero, end=" ")
+> 0 5 10 15 20 25 30 35 40 45 50
+```
+
+##### While
+
+O comando while é usado para repetir um bloco de código várias vezes. Faz sentido usar while quando não sabemos o número exato de vezes que nosso bloco de código deve ser executado.
+
+```python
+opcao = 3
+
+while opcao != 0:
+  opcao = int(input("[1] Sacar \n [2] Extrato \n [0] Sair \n"))
+  if opcao == 1:
+    print("Sacando")
+    break # interrompe o looping
+  elif opcao == 2:
+    print("Exibindo o Extrato")
+    break # interrompe o looping
+  elif opcao == 0:
+    print("Agradecemos por escolher nossos serviços!")
+  else: 
+    print("Escolha uma opção válida.")
+```
+
+> O comando **break** interrompe a execução do código. O comando **continue** ignora o trecho do código ao qual se refere.
+
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 5. Strings
+
+#### 5.1 Conhecendo Métodos Úteis da Classe String
+
+A classe String do Python é famosa por ser rica em métodos e possuir uma interface muito fácil de trabalhar.
+
+Em algumas linguagens manipular sequências de caracteres não é um trabalho trivial, porém, em Python esse trabalho é muito simples.
+
+##### Maíuscula, minúscula e título
+
+```python
+curso = "pYThOn"
+
+print(curso.upper())
+>>> PYTHON
+
+print(curso.lower())
+>>> python
+
+print(curso.title())
+>>> Python
+```
+
+##### Eliminar espaços em branco
+
+```python
+curso = " Python "
+
+print(curso.strip())
+>>> "Python"
+
+print(curso.lstrip())
+>>> "Python "
+
+print(curso.rstrip())
+>>> " Python"
+```
+
+##### Junções e centralização
+
+```python
+curso = "Python"
+
+print(curso.center(10, "#"))
+>>> "##Python##"
+
+print(".".join(curso))
+>>> "P.y.t.h.o.n"
+```
+
+#### 5.2 Interpolação de Variáveis
+
+Em Python temos 3 formas de interpolar variáveis em strings:
+* Usando o sinal %;
+* O método format;
+* f strings.
+
+> A primeira forma não é atualmente recomendada e seu uso em Python 3 é raro.
+
+##### Format
+
+```python
+nome = "Carol"
+idade = "28"
+profissao = "progamadora"
+curso = "python"
+
+print("Olá, eu me chamo {}. Tenho {} anos, trabalho como {} e estou aprendendo {}." .format(nome, idade, profissao, curso))
+
+# ou 
+
+print ("Olá, eu me chamo {1}. Tenho {0} anos, trabalho como {2} e estou aprendendo {3}." .format(idade, nome, profissao, curso))
+```
+
+##### F-String
+
+```python
+nome = "Carol"
+idade = "28"
+profissao = "progamadora"
+curso = "python"
+
+print(f"Olá, eu me chamo {nome}. Tenho {idade} anos, trabalho como {profissao} e estou aprendendo {curso}.")
+>>> "Olá, eu me chamo Carol. Tenho 28 anos, trabalho como progamadora e estou aprendendo python."
+```
+
+Pode receber argumentos de formatação:
+* caracteres totais na string;
+> OBS: Considera os caracteres da string e acrescenta, em espaços vazios, o que falta para chegar ao número informado.
+>
+>Ex. Se o argumento for 10, e a palavra for "arroz", serão acrescidos 5 espaços em branco antes da palavra.
+* digitos após a vírgula.
+
+```python
+PI = 3.14159
+
+print(f"Pi é igual a: {PI:.2f}")
+>>> "Pi é igual a: 3.14"
+
+print(f"Pi é igual a: {PI:10.2f}")
+>>> "Pi é igual a:       3.14"
+```
+
+#### 5.3 Fatiamento de Strings
+
+Fatiamento de strings é uma técnica utilizada para retornar substrings (partes da string original), informando inicio (start), fim (stop) e passo (step).
+
+```python
+nome: "Guilherme Arthur de Carvalho"
+
+nome[0]
+>>> "G"
+
+nome[:9]
+>>> "Guilherme"
+
+nome[10:]
+>>> "Arthur de Carvalho"
+
+nome[10:16]
+>>> "Arthur"
+
+nome[10:16:2] # a partir do 10, até o 16, pulando um caractere.
+>>> "Atu"
+
+nome[:]
+>>> "Guilherme Arthur de Carvalho"
+
+nome[::-1]
+>>> "ohlavraC ed ruhtrA emrehliuG"
+```
+
+#### 5.4 String de Múltiplas Linhas
+
+Strings de múltiplas linhas são definidas informando 3 aspas simples ou duplas durante a atribuição. 
+* Elas podem ocupar várias linhas do código, e todos os espaços em branco são incluídos na string final. 
+
+```python
+nome = "Guilherme"
+
+mensagem = f"""
+Olá, meu nome é {nome}.
+    Estou aprendendo Python.
+"""
+print(mensagem)
+
+>>> Olá, meu nome é Guiherme.
+     Estou aprendendo Python.
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 6. Listas e Tuplas
+
+#### 6.1 Criação e Acesso aos Dados
+
+**Listas**, em Python, podem armazenar, de maneira sequencial,
+qualquer tipo de objeto.
+
+Listas são objetos mutáveis, portanto podemos alterar seus valores após a criação.
+
+> Quase todos os métodos aplicados a listas, também podem ser utilizados em tuplas.
+>
+> A principal diferença entre os dois está no fato de que a tupla é imutável. Assim, os métodos que alteram valores na lista não funcionam na tupla. >
+>
+> Além disso, a forma como os dados são declarados é diferente.
+
+Podemos criar **listas** utilizando o construtor list, a função range ou colocando valores separados por vírgula dentro de colchetes:
+
+```python
+letras = list("python")
+
+numeros = list(range(10))
+
+frutas = ["laranja", "maca", "uva"]
+```
+
+> OBS: Uma lista pode ser declarada sem valores.
+
+**Tuplas** são criadas a patir da classe **tuple**, ou colocando valores separados por vírula de parênteses.
+
+```python
+frutas = ("laranja", "pera", "uva",)
+
+pais = ("Brasil",)
+
+letras = tuple("python")
+
+numeros = tuple([1, 2, 3, 4])
+```
+
+> OBS: É uma boa prática colocar uma vírgula ao fim dos elementos declarados, para que o Python não confunda a tupla com precedência em operações.
+
+A lista é uma sequência, portanto podemos acessar seus dados utilizando índices 
+* Contamos o índice de determinada sequência a partir do zero.
+
+```python
+frutas = ["maçã", "laranja", "uva", "pêra"]
+frutas[0] 
+# maçã
+frutas[2] 
+# uva
+```
+
+Sequências também suportam indexação negativa, e a contagem começa em 1:
+
+```python
+frutas = ["maçã", "laranja", "uva", "pêra"]
+frutas[-4] 
+# maçã
+frutas[-2] 
+# uva
+```
+
+Tupla: ✔
+
+##### Listas Aninhadas
+
+Listas podem armazenar todos os tipos de objetos Python,
+portanto podemos ter listas que armazenam outras listas.
+Com isso, surgem estruturas bidimensionais, que podem ser
+acessadas informando os índices de linha e coluna.
+
+```python
+matriz = [
+  [1, "a", 2],
+  ["b", 3, 4],
+  [6, 5, "c"]
+]
+
+# Para acessar os itens da matriz
+
+matriz[0] 
+# [1, "a", 2]
+matriz[0][-1] 
+# 2
+```
+
+Tupla: ✔
+
+##### Fatiamento de Listas
+
+Além de acessar elementos diretamente, podemos extrair um
+conjunto de valores de uma sequência.
+
+Para isso basta passar o índice inicial e/ou final para acessar o conjunto.
+
+Podemos, ainda, informar quantas posições o cursor deve "pular" no acesso.
+
+```python
+lista = ["p", "y", "t", "h", "o", "n"]
+
+lista[2:] 
+# ["t", "h", "o", "n"]
+lista[0:3:2] 
+# ["p", "t"]
+lista[::-1] 
+# ["n", "o", "h", "t", "y", "p"]
+```
+
+> LEMBRETE: O útlimo valor não é retornado.
+
+Tupla: ✔
+
+##### Iterar Listas
+
+A forma mais comum para percorrer os dados de uma lista é utilizando o comando **for**.
+
+```python
+carros = ["gol", "celta", "palio"]
+
+for carro in carros:
+  print(carro)
+```
+
+Tupla: ✔
+
+##### Função Enumerate
+
+Às vezes é necessário saber qual o índice do objeto dentro do laço for Para isso podemos usar a função enumerate.
+
+```python
+carros = ["gol", "celta", "palio"]
+
+for incdice, carro in enumerate(carros):
+  print(f"{indice}: {carro}")
+```
+
+Tupla: ✔
+
+##### Compreensão de Listas
+
+A compreensão de lista oferece uma sintaxe mais curta
+ao criar uma nova lista com base nos valores
+de uma lista existente, ou aplicando alguma modificação nos elementos de uma lista existente.
+
+```python
+numeros = [1, 30, 21, 2, 9, 65, 34]
+pares = []
+
+for numero in numeros:
+  if numero % 2 == 0:
+    pares.append(numero)
+
+# ou
+
+pares = [numero for numero in numeros if numero % 2 == 0]
+```
+Tupla: ⚠ 
+> Funciona, mas a classe a receber os elementos (no caso, **pares**) deve ser uma lista, e não uma tupla.
+
+#### 6.2 Métodos da classe list
+
+##### append()
+
+Tupla: ❌
+
+Adiciona elementos à lista.
+
+```python
+lista = []
+
+lista.append(1)
+lista.append("Python")
+lista.append([40, 30, 20])
+
+print(lista)
+>>> [1, "Python", [40, 30, 20]]
+```
+
+##### clear()
+
+Tupla: ❌
+
+Limpa todos os elementos da lista.
+
+```python
+lista = [1, Python, [40, 30, 20]]
+
+lista.clear()
+
+print(lista)
+>>> 
+```
+
+##### copy()
+
+Tupla: ❌
+
+Retorna uma lista diferente com os mesmos elementos da original. Ou seja, cria uma segunda lista com um **id** diferente.
+
+```python
+lista = [1, "Python", [40, 30, 20]]
+
+lista.copy()
+
+print(lista)
+>>> [1, "Python", [40, 30, 20]]
+```
+
+##### count()
+
+Tupla: ✔
+
+Conta o número de vezes que um elemento aparece na lista.
+
+```python
+cores = [" vermelho", " azul", " verde", "azul"]
+
+cores.count(" vermelho") 
+# 1
+cores.count(" azul") 
+# 2
+cores.count(" verde") 
+# 1
+```
+
+##### extend()
+
+Tupla: ❌
+
+Utilizado para juntar duas listas diferentes.
+
+> Inclusive elementos repetidos.
+
+```python
+linguagens = [" python", " js", "c"]
+
+print(linguagens) 
+>>> ["python", "js", "c"]
+
+linguagens.extend(["java", "csharp"])
+
+print(linguagens) 
+>>> ["python", "js", "c", "java", "csharp"]
+```
+
+##### index()
+
+Tupla: ✔
+
+Retorna o índice da primeira ocorrência do objeto.
+
+```python
+linguagens = ["python", " js", " c", " java", "csharp"]
+
+linguagens.index("java") 
+# 3
+linguagens.index("python") 
+# 0
+```
+
+##### pop()
+
+Tupla: ❌
+
+Retira da lista o último elemento, a menos que o índice seja passado entre os parênteses.
+
+```python
+linguagens = ["python", "js", "c", "java", "csharp"]
+
+linguagens.pop() 
+# csharp
+linguagens.pop() 
+# java
+linguagens.pop() 
+# c
+linguagens.pop(0) 
+# python
+
+print(linguagens)
+>>> "js"
+```
+
+##### remove()
+
+Tupla: ❌
+
+```python
+linguagens = [" python", " js", " c", " java", "csharp"]
+
+linguagens.remove("c")
+
+print(linguagens) 
+>>> ["python", "js", "java", "csharp"]
+```
+
+##### reverse()
+
+Tupla: ❌
+
+```python
+linguagens = ["python", " js", " c", " java", "csharp"]
+
+linguagens.reverse()
+
+print(linguagens) 
+>>> ["csharp", "java", "c", "js", "python"]
+```
+
+##### sort()
+
+Tupla: ❌
+
+```python
+linguagens = ["python", " js", "c", " java", "csharp"]
+
+linguagens.sort() 
+>>> ["c", "csharp", "java", "js", "python"]
+
+linguagens.sort(reverse=True)
+>>> ["python", "js", "java", "csharp", "c"]
+
+# Ordenação crescente por tamanho das palavras
+linguagens.sort(key= lambda x: len(x)) 
+>>> ["c", "js", "java", "python", "csharp"]
+
+# Ordenação decrescente por tamanho das palavras
+linguagens.sort(key= lambda x: len(x), reverse= True ) 
+>>> ["python", "csharp", "java", "js", "c"]
+```
+
+##### len()
+
+Tupla: ✔
+
+Retorna o tamanho da lista.
+
+```python
+linguagens = ["python", " js", "c", " java", "csharp"]
+
+len(linguagens) 
+# 5
+```
+
+##### sorted()
+
+Tupla: ✔
+
+```python
+linguagens = ["python", "js", " c", " java", "csharp"]
+
+# Ordenação crescente por tamanho das palavras
+sorted(linguagens, key=
+lambda x: len(x)) 
+>>> ["c", "js", "java", "python", "csharp"]
+
+# Ordenação decrescente por tamanho das palavras
+sorted(linguagens, key=
+lambda x: len(x), reverse= True) 
+>>> ["python", "csharp",
+"java", "js", "c"]
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 7. Conjuntos
+
+#### 7.1 Criação e Acesso aos Dados
+
+Um **set** é uma coleção que não possui objetos repetidos.
+
+Usamos sets para representar conjuntos matemáticos ou eliminar itens duplicados de um iterável.
+
+```python
+set([1 , 2 , 3 , 1 , 3 , 4 ]) 
+# {1, 2, 3, 4)
+
+set(" abacaxi") 
+# {"b", "a", "c", "x", "i"}
+
+set((" palio", " gol", " celta", " palio")) 
+# {"gol", "celta", "palio"}
+```
+
+Conjuntos em Python não suportam indexação e nem
+fatiamento, caso seja necessário acessar os seus valores, é preciso converter o conjunto para lista.
+
+```python
+numeros = {1, 2, 3, 4}
+
+numeros = list(numeros)
+
+numeros[0]
+# 1
+```
+
+##### Iterar Conjuntos
+
+A forma mais comum para percorrer os dados de um conjunto é utilizando o comando for.
+
+```python
+carros = {"gol", "celta", "palio"}
+
+for carro in carros:
+  print(carro)
+```
+
+##### Função Enumerate
+
+Às vezes é necessário saber qual o índice do objeto dentro do laço for Para isso podemos usar a função enumerate.
+
+```python
+carros = {"gol", "celta", "palio"}
+
+for indice, carro in enumerate(carros):
+  print(f"{indice}: {carro}")
+```
+
+#### 7.2 Métodos da classe set
+
+##### union()
+
+![união](./image/uniao-conjuntos.png)
+
+```python
+conjunto_a = {1 , 2}
+conjunto_b = {3 , 4}
+
+conjunto_a.union(conjunto_b) 
+# {1, 2, 3, 4}
+```
+
+##### intersection()
+
+![intersecção](./image/intersecao-conjuntos.png)
+
+```python
+conjunto_a = {1 , 2 , 3}
+conjunto_b = {2 , 3 , 4}
+
+conjunto_a.intersection(conjunto_b) 
+# {2, 3}
+```
+
+##### difference()
+
+![diferença](./image/diferenca-conjuntos.png)
+
+```python
+conjunto_a = {1 , 2 , 3}
+conjunto_b = {2 , 3 , 4}
+
+conjunto_a.difference(conjunto_b) 
+# {1}
+conjunto_b.difference(conjunto_a) 
+# {4}
+```
+
+##### symmetric_difference()
+
+![diferença simétrica](./image/diferenca-simetrica-conjuntos.png)
+
+```python
+conjunto_a = {1 , 2 , 3}
+conjunto_b = {2 , 3 , 4}
+
+conjunto_a.symmetric_difference(conjunto_b) 
+# {1, 4}
+```
+
+##### issubset()
+
+Verifica se um conjunto é subconjunto de outro e retorna valores booleanos.
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issubset(conjunto_b) 
+# True
+conjunto_b.issubset(conjunto_a) 
+# False
+```
+
+##### issuperset()
+
+Verifica se um conjunto contém outro e retorna valores booleanos.
+
+```python
+conjunto_a = {1, 2, 3}
+conjunto_b = {4, 1, 2, 5, 6, 3}
+
+conjunto_a.issuperset(conjunto_b) 
+# False
+conjunto_b.issuperset(conjunto_a) 
+# True
+```
+
+##### isdisjoint()
+
+Verifica se dois conjuntos não tem nenhuma relação e retorna valores booleanos.
+
+```python
+conjunto_a = {1, 2, 3, 4, 5}
+conjunto_b = {6, 7, 8, 9}
+conjunto_c = {1 , 0}
+
+conjunto_a.isdisjoint(conjunto_b) 
+# True
+conjunto_a.isdisjoint(conjunto_c) 
+# False
+```
+
+##### add()
+
+```python
+sorteio = {1 , 23}
+
+sorteio.add(25) 
+# {1, 23, 25}
+sorteio.add(42) 
+# {1, 23, 25, 42}
+sorteio.add(25) 
+# {1, 23, 25, 42} 
+# Nada acontece porque o número 25 já estava no conjunto
+```
+
+##### clear()
+
+```python
+sorteio = {1 , 23}
+
+sorteio.clear()
+
+sorteio 
+# {}
+```
+
+##### copy()
+
+```python
+sorteio = {1 , 23}
+
+sorteio 
+# {1, 23}
+
+sorteado = sorteio.copy()
+sorteio 
+# {1, 23}
+sorteado 
+# {1, 23}
+```
+
+##### discard()
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros 
+# {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}
+
+numeros.discard(1)
+
+numeros.discard(45)
+
+numeros 
+# {2, 3, 4, 5, 6, 7, 8, 9, 0}
+```
+
+##### pop()
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+numeros 
+# {0, 1, 2, 3, 4, 5, 6, 7, 8,
+
+numeros.pop() 
+# 0
+numeros.pop() 
+# 1
+
+numeros 
+# {2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+##### rmemove()
+
+```python
+numeros = {1 , 2 , 3 , 1 , 2 , 4 , 5 , 5 , 6 , 7 , 8 , 9 , 0}
+
+numeros 
+# {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+numeros.remove(0) 
+# 0
+
+numeros 
+# {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
+
+> A diferença entre discard() e remove() é que o primeiro não retorna erro se for pedido para que seja descartado um número que não está no conjunto.
+
+##### len()
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+len(numeros) 
+# 10
+```
+
+##### in()
+
+```python
+numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}
+
+1 in numeros 
+# True
+
+10 in numeros 
+# False
+```
+
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 8. Dicionários
+
+#### 8.1 Criação de Dicionários e Acesso aos Dados
+
+Um **dicionário** é um conjunto **não ordenado** de pares chave-valor, onde as chaves são únicas em uma dada instância do dicionário.
+
+Dicionários são delimitados por chaves e contém uma lista de pares chave-valor separada por vírgulas.
+
+```python
+pessoa = {"nome": "Guilherme", "idade": 28}
+
+pessoa = dict(nome = "Guilherme", idade = 28)
+
+pessoa["telefone"] = "3333-1234"
+# {"nome": "Guilherme", "idade": 28, "telefone": "3333-1234"}
+```
+
+Os dados são acessados e modificados através da chave.
+
+```python
+dados = {"nome": "Guilherme", "idade": 28 , "telefone": "3333-1234"}
+
+dados["nome"] 
+# "Guilherme"
+dados["idade"] 
+# 28
+dados["telefone"] 
+# "3333-1234"
+
+# Para sobrescrever os valores do dicionário
+
+dados["nome"] = "Maria"
+dados["idade"] = 18
+dados["telefone"] = "9988-1781"
+
+print(dados) 
+>>> {"nome": "Maria", "idade": 18, "telefone": "9988-1781"}
+```
+
+##### Dicionários Aninhados
+
+**Dicionários** podem armazenar qualquer tipo de objeto Python como valor, desde que a chave para esse valor seja um objeto imutável como (strings e números).
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", " telefone": "3333-2221"},
+  "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+  "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+  "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+print(contatos["giovanna@gmail.com"]["telefone"])
+>>> "3443-2121"
+```
+
+> OBS: Para acessar um dicionário dentro de outro dicionário, não importa quantos níveis abaixo do primeiro, é só acrescentar a chave desejada entre colchetes.
+>
+> Ex. print(contatos["guilherme@gmail.com"]["nome_completo"]["sobrenome"])
+
+##### Iterar Dicionários
+
+A forma mais comum para percorrer os dados de um dicionário é utilizando o comando **for**.
+
+```python
+for chave in contatos:
+  print(chave, contatos[chave])
+
+# ou, de forma melhor:
+
+for chave, valor in contatos.items():
+  print(chave, valor)
+
+>>> guilherme@gmail.com {'nome': 'Guilherme', 'telefone': '3333-2221'}
+>>> giovanna@gmail.com {'nome': 'Giovanna', 'telefone': '3443-2121'}
+>>> chappie@gmail.com {'nome': 'Chappie', 'telefone': '3344-9871'}
+>>> melaine@gmail.com {'nome': 'Melaine', 'telefone': '3333-7766'}
+```
+
+#### 8.2 Métodos da classe dict
+
+##### clear()
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+  "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+  "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+  "melaine@gmail.com": {"nome": "Melaine", " telefone": "3333-7766"},
+}
+
+contatos.clear()
+
+print(contatos) 
+>>> {}
+```
+
+##### copy()
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+}
+
+copia = contatos.copy()
+
+copia["guilherme@gmail.com"] = {"nome": "Gui"}
+
+print(contatos["guilherme@gmail.com"]) 
+# {"nome": "Guilherme", "telefone": "3333-2221"}
+
+print(copia["guilherme@gmail.com"]) 
+# {"nome": "Gui"}
+```
+
+##### fromkeys()
+
+Cria chaves com ou sem valores vincuados. Em um dicionário existente ou não.
+
+```python
+nome-do-dicionario.fromkeys(["nome", "telefone"]) 
+# {"nome": None, "telefone": None}
+
+dict.fromkeys(["nome", "telefone"], "vazio") 
+# {"nome": "vazio", "telefone": "vazio"
+```
+
+##### get()
+
+O método get() também retorna valores, e é mais comumente utilizado quando não se sabe se uma chave existe dentro de um dicionário.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+}
+
+contatos["chave"] 
+# KeyError
+
+contatos.get("chave") 
+# None
+# Retorno padrão.
+
+contatos.get("chave", {}) 
+# {}
+# O segundo argumento define o retorno padrão caso uma chave não exista.
+
+contatos.get("guilherme@gmail.com", {}) 
+# {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"}
+```
+
+##### items()
+
+Retorna uma lista de tupas, contendo os itens do dicionário.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
+}
+
+contatos.items() 
+# dict_items([('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})])
+```
+
+##### keys()
+
+Retorna as chaves do dicionário.
+
+```python
+contatos = {
+"guilherme@gmail.com": {"nome": "Guilherme"," telefone": "3333-2221"}
+}
+
+contatos.keys() 
+# dict_keys(['guilherme@gmail.com'])
+```
+
+##### pop()
+
+Remove a chave de um dicionário.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
+}
+
+contatos.pop("guilherme@gmail.com") 
+# {'nome': 'Guilherme','telefone': '3333-2221'}
+
+contatos.pop("guilherme@gmail.com", {}) 
+# {}
+```
+
+##### popitem()
+
+Remove os valores de uma chave.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
+}
+
+contatos.popitem() 
+# ('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone':'3333-2221'})
+
+contatos.popitem() 
+# KeyError
+```
+
+##### detdefault()
+
+Se a chave não existir no dicionário, ela é adicionada com o valor declarado. 
+
+Se a chave exisir no dicionário, nada acontece (o valor não é atualizado).
+
+```python
+contato = {'nome': 'Guilherme', 'telefone': '3333-2221'}
+
+contato.setdefault("nome", "Giovanna") 
+# Guilherme
+
+contato 
+# {'nome': 'Guilherme', 'telefone': '3333-2221'}
+
+contato.setdefault("idade", 28) 
+# 28
+
+contato 
+# {'nome': 'Guilherme', 'telefone': '3333-2221', 'idade': 28}
+```
+
+##### update()
+
+Se a chave não existir no dicionário, ela é adicionada com o valor declarado. 
+
+Se a chave exisir no dicionário, o valor é atualizado.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme","telefone": "3333-2221"}
+}
+
+contatos.update({"guilherme@gmail.com": {"nome": "Gui"}})
+
+contatos 
+# {'guilherme@gmail.com': {'nome': 'Gui}
+
+contatos.update({"giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3322-8181"}})
+
+contatos 
+# {'guilherme@gmail.com': {'nome': 'Gui'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3322 8181'}}
+```
+
+##### values()
+
+Retorna os valores do dicionário.
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+  "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+  "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+  "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+contatos.values() 
+# dict_values([{'nome': 'Guilherme', 'telefone': '3333-2221'}, {'nome': 'Giovanna', 'telefone': '3443-2121'}, {'nome': 'Chappie','telefone': '3344 9871'}, {'nome': 'Melaine', 'telefone': '3333 7766'}])
+```
+
+##### in()
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+  "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+  "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+  "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+"guilherme@gmail.com" in contatos 
+# True
+
+"megui@gmail.com" in contatos 
+# False
+
+"idade" in contatos ["guilherme@gmail.com"] 
+# False
+
+"telefone" in contatos ["giovanna@gmail. com"] 
+# True
+```
+
+##### del()
+
+```python
+contatos = {
+  "guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"},
+  "giovanna@gmail.com": {"nome": "Giovanna", "telefone": "3443-2121"},
+  "chappie@gmail.com": {"nome": "Chappie", "telefone": "3344-9871"},
+  "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
+}
+
+del contatos["guilherme@gmail.com"]["telefone"]
+del contatos["chappie@gmail.com"]
+
+contatos
+# {'guilherme@gmail.com': {'nome': 'Guilherme'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3443 2121'}, 'melaine@gmail.com': {'nome':'Melaine', 'telefone': '3333 7766'}}
+```
+---
+Feito por cla-isse 💜
+
+## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)
+
+### 9. Funções
+
+Função é um bloco de código identificado por um nome e pode
+receber uma lista de parâmetros. Esses parâmetros podem ou
+não ter valores padrões.
+
+Usar funções torna o código mais
+legível e possibilita o reaproveitamento de código.
+
+Programar baseado em funções, é o mesmo que dizer que estamos
+programando de maneira estruturada.
+
+```python
+def exibir_mensagem():
+  print("Olá Mundo!")
+
+exibir_mensagem()
+>>> Olá Mundo!
+```
+
+##### Argumentos Nomeados
+
+Funções podem ser chamadas usando argumentos
+nomeados da forma chave=valor.
+
+```python
+def salvar_carro(marca, modelo, ano, placa):
+  # salva carro no banco de dados
+  print(f"Carro inserido com sucesso! {marca}/{modelo}/{ano}/{placa}")
+
+salvar_carro("Fiat", "Palio", 1999, "ABC-1234")
+
+# ou
+
+salvar_carro(marca="Fiat", modelo="Palio", ano=1999, placa="ABC-1234")
+
+# ou
+
+salvar_carro(**{"marca": "Fiat", "modelo":"Palio", "ano": 1999, "placa":"ABC-1234"})
+
+# Carro inserido com sucesso! Fiat/Palio/1999/ABC-1234
+```
+
+##### Return()
+
+Para retornar um valor, utilizamos a palavra reservada **return**. Toda função Python retorna *None* por padrão. 
+Diferente de outras linguagens de programação, em Python uma função pode retornar mais de um valor.
+
+```python
+def retorna_antecessor_sucessor(numero):
+  antecessor = numero - 1
+  sucessor = numero + 1
+  
+  return antecessor, sucessor
+
+print(retorna_antecessor_sucessor(10))
+>>> 9, 11
+```
+
+##### Args e Kwargs
+
+Podemos combinar parâmetros obrigatórios com args e
+kwargs Quando esses são definidos (*args e **kwargs), o
+método recebe os valores como tupla e dicionário
+respectivamente.
+
+```python
+def exibir_poema(data_extenso, *args, **kwargs):
+  texto = "\n".join(args)
+  meta_dados = "\n".join([f"{chave.title()}:{valor}" for chave, valor in kwargs.items()])
+  mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
+  print(mensagem)
+
+exibir_poema("Zen of Python", "Beautiful is better than ugly.", autor="Tim Peters", ano=1999)
+```
+
+##### Parâmetros Especiais
+
+Por padrão, argumentos podem ser passados para uma função
+Python tanto por posição quanto explicitamente pelo nome.
+
+Para uma melhor legibilidade e desempenho, faz sentido restringir a maneira pela qual argumentos possam ser passados, assim um desenvolvedor precisa apenas olhar para a definição da função para determinar se os itens são passados por posição, por posição e nome, ou apenas nome.
+
+![Parâmetros Especiais](./image/parametros-especiais.png)
+
+###### Positional Only
+
+```python
+def criar_carro (modelo, ano, placa, /, marca, motor, combustivel):
+  print(modelo, ano, placa, marca, motor, combustivel)
+
+criar_carro("Palio", 1999, "ABC-1234", marca="Fiat", motor="1.0",combustivel="Gasolina") 
+# válido
+
+criar_carro(modelo="Palio", ano=1999, placa="ABC-1234", marca="Fiat",motor=" 1.0", combustivel="Gasolina") 
+# inválido
+```
+
+###### Keyword Only
+
+```python
+def criar_carro (*, modelo, ano, placa, marca, motor, combustivel):
+  print(modelo, ano, placa, marca, motor, combustivel)
+
+criar_carro(modelo="Palio", ano =1999, placa="ABC-1234", marca="Fiat",
+motor="1.0", combustivel="Gasolina") 
+# válido
+
+criar_carro("Palio", 1999, "ABC-1234", marca="Fiat", motor="1.0",
+combustivel="Gasolina") 
+# inválido
+```
+
+###### Keyword and Positional Only
+
+```python
+def criar_carro (modelo, ano, placa, /, *, marca, motor, combustivel):
+  print(modelo, ano, placa, marca, motor, combustivel)
+
+criar_carro("Palio", 1999, "ABC 1234", marca="Fiat", motor="1.0", combustivel="Gasolina") 
+# válido
+
+criar_carro(modelo="Palio", ano=1999, placa="ABC-1234", marca="Fiat", motor="1.0", combustivel="Gasolina")
+# inválido
+```
+
+###### Objetos de Primeira Classe
+
+Em Python tudo é objeto, dessa forma funções também são
+objetos. Isso as torna objetos de primeira classe.
+
+Isso significa que é posível:
+* Atribuir funções a variáveis;
+* Passá-las como parâmetro para outras funções;
+* Usá-las como valores em estruturas de dados (tuplas, dicionários, etc);
+* Usá-las como valor de retorno para uma função (closures).
+
+```python
+def somar (a, b):
+  return a + b
+
+def exibir_resultado (a, b, funcao):
+  resultado = funcao(a, b)
+  print(f"O resultado da operação {a} + {b} = {resultado}")
+
+exibir_resultado(10, 10, somar) 
+# O resultado da operação 10 + 10 = 20
+```
+
+###### Escopo Local e Global
+
+Python trabalha com escopo local e global.
+
+Dentro do bloco da função, o **escopo é local**, portanto alterações ali feitas em objetos imutáveis serão perdidas quando o método terminar de ser executado.
+
+Para usar objetos globais, utilizamos a palavra chave **global**, que informa ao interpretador que a variável que está sendo manipulada no escopo local é global.
+> Essa NÃO é uma boa prática e deve ser evitada
+
+```python
+salario = 2000
+
+def salario_bonus(bonus):
+  global salario
+  salario += bonus
+  return salario
+
+salario_bonus(500)
+>>> 2500
+```
+---
+Feito por cla-isse 💜
