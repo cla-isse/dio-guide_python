@@ -30,6 +30,8 @@ Mentor: [@guicarvalho](https://github.com/guicarvalho)
 
 [9. Funções]()
 
+[Bônus: Desafios de Código](./challenges/)
+
 ---
 
 ## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)

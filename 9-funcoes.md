@@ -27,6 +27,8 @@ Mentor: [@guicarvalho](https://github.com/guicarvalho)
 
 [9. Funções](./9-funcoes.md#9-funções) <-
 
+[Bônus: Desafios de Código](./challenges/)
+
 ---
 
 ## ![PYTHON](https://img.shields.io/badge/Python-000?style=for-the-badge&logo=python)

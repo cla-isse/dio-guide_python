@@ -54,6 +54,8 @@ Mentor: [@guicarvalho](https://github.com/guicarvalho)
 
 [9. Funções](./9-funcoes.md#9-funções) 🟦🟦🟦⬛
 
+[Bônus: Desafios de Código](./challenges/)
+
 ---
 
 Feito por [cla-isse](https://github.com/cla-isse) 💜

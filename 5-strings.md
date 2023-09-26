@@ -31,6 +31,8 @@ Mentor: [@guicarvalho](https://github.com/guicarvalho)
 
 [9. Funções](./9-funcoes.md)
 
+[Bônus: Desafios de Código](./challenges/)
+
 ---
 
 
